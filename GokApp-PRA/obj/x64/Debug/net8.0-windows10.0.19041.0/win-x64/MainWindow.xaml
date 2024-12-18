@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Window
+    x:Class="GokApp_PRA.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:GokApp_PRA"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+    <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center" Padding="20">
+
+        <!-- Start Content Section -->
+        <StackPanel x:ConnectionId='2' x:Name="StartContent" Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0 0 0 30">
+            <TextBlock FontSize="26" FontWeight="Bold" TextAlignment="Center" Margin="0 0 0 20" Foreground="#333">
+                WELKOM OP DEZE GOK APP
+            </TextBlock>
+            <TextBlock FontSize="18" TextAlignment="Center" Margin="0 0 0 30" Foreground="#666">
+                Klik om te beginnen met gokken!
+            </TextBlock>
+            <Button x:ConnectionId='11'                           Width="220" Height="50" Background="#4CAF50" Foreground="White" FontSize="16" BorderBrush="Transparent" HorizontalAlignment="Center">
+                Begin met gokken
+            </Button>
+        </StackPanel>
+
+        <!-- Main Content Section -->
+        <StackPanel x:ConnectionId='3' x:Name="ContentSection" Visibility="Collapsed" Width="500" BorderBrush="#D1D1D1" BorderThickness="1" Padding="40" Background="White">
+
+            <!-- Balance -->
+            <TextBlock x:ConnectionId='4' x:Name="balanceText" FontSize="20" Margin="0 0 0 30" HorizontalAlignment="Center" Foreground="#333" FontWeight="SemiBold">
+                Huidige Balans: €100
+            </TextBlock>
+
+            <!-- Match Selection -->
+            <StackPanel Margin="0 0 0 20">
+                <TextBlock FontSize="18" Margin="0 0 0 10" Foreground="#333">Kies een Wedstrijd</TextBlock>
+                <ComboBox x:ConnectionId='10' x:Name="matches" HorizontalAlignment="Stretch" Padding="10" FontSize="16" BorderBrush="#D1D1D1" BorderThickness="1">
+                </ComboBox>
+            </StackPanel>
+
+            <!-- Bet Selection -->
+            <StackPanel Margin="0 0 0 20">
+                <TextBlock FontSize="18" Margin="0 0 0 10" Foreground="#333">Kies een Uitslag</TextBlock>
+                <ComboBox x:ConnectionId='9' x:Name="bet" HorizontalAlignment="Stretch" Padding="10" FontSize="16" BorderBrush="#D1D1D1" BorderThickness="1">
+                    <ComboBoxItem>Team 1</ComboBoxItem>
+                    <ComboBoxItem>Gelijk</ComboBoxItem>
+                    <ComboBoxItem>Team 2</ComboBoxItem>
+                </ComboBox>
+            </StackPanel>
+
+            <!-- Amount to Bet -->
+            <StackPanel Margin="0 0 0 20">
+                <TextBlock FontSize="18" Margin="0 0 0 10" Foreground="#333">Bedrag</TextBlock>
+                <TextBox x:ConnectionId='8' x:Name="amount" HorizontalAlignment="Stretch" Padding="10" FontSize="16" BorderBrush="#D1D1D1" BorderThickness="1" />
+            </StackPanel>
+
+            <!-- Bet Button -->
+            <Button x:ConnectionId='5' x:Name="myButton"                        Width="220" Height="50" Background="#4CAF50" Foreground="White" FontSize="16" BorderBrush="Transparent" HorizontalAlignment="Center">
+                Gok
+            </Button>
+
+            <!-- Error Text -->
+            <TextBlock x:ConnectionId='6' x:Name="error" Foreground="Red" FontSize="16" Margin="0 0 0 20"></TextBlock>
+
+            <!-- Winnings -->
+            <Border BorderBrush="#D1D1D1" BorderThickness="1" Padding="20" Margin="20 0 0 0" Background="#F9F9F9">
+                <TextBlock x:ConnectionId='7' x:Name="winnings" FontSize="16" Foreground="#333" TextWrapping="Wrap"></TextBlock>
+            </Border>
+
+        </StackPanel>
+    </StackPanel>
+
+</Window>
+
